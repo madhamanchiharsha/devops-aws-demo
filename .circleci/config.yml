@@ -21,7 +21,7 @@ jobs:
           name: "install dependencies"
           command: "python3 -m venv venv .venv/bin/activate make install"
       - run:
-        name: "Run link"
+          name: "Run link"
           command: ".venv/bin/activate make lint"
       - run:
           name: "Run tests"
