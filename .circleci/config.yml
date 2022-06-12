@@ -26,8 +26,11 @@ jobs:
           name: "permissions for folder"
           command: "chmod -R 777 ~/repo"
       - run:
+          name: "create venv"
+          command: "python -m venv venv"
+      - run:
           name: "install dependencies"
-          command: "python -m venv venv . venv/bin/activate make install"
+          command: ". venv/bin/activate make install"
       - save_cache:
           paths:
             - ./venv
