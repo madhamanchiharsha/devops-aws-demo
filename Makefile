@@ -1,5 +1,5 @@
 install:
-	pip install -r requirements.txt
+	pip3 install -r requirements.txt
 	
 lint:
 	pylint --disable=R,C hello.py
