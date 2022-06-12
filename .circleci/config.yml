@@ -21,7 +21,7 @@ jobs:
             - v1-dependencies-
       - run:
           name: "permissions"
-          command: "chown -R root:root ~/repo"
+          command: "chown -R circleci:circleci ~/repo"
       - run:
           name: "install dependencies"
           command: "sudo python3 -m venv venv . venv/bin/activate make install"
