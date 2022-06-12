@@ -23,6 +23,9 @@ jobs:
           name: "permissions"
           command: "chown -R circleci:circleci ~/repo"
       - run:
+          name: "permissions for folder"
+          command: "chmod -R 777 ~/repo"
+      - run:
           name: "install dependencies"
           command: "sudo python3 -m venv venv . venv/bin/activate make install"
       - save_cache:
